@@ -18,5 +18,8 @@ from django.contrib import admin
 from app import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$',views.home,name='home'),
+    url(r'^matches$',views.matches,name='matches'),
+    url(r'^commentary/(?P<mid>\d+)/$',views.commentary,name='commentary'),
+ 	url(r'^livescore/(?P<mid>\d+)/$',views.livescore,name='livescore'),
+ 	url(r'^scorecard/(?P<mid>\d+)/$',views.scorecard,name='scorecard')   
 ]
